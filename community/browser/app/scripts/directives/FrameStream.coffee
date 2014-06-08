@@ -35,6 +35,6 @@ angular.module('neo4jApp.directives')
       $scope.motd = motdService
       $scope.editor = Editor
     ]
-    link: (scope, element, attrs) ->
-      scope.frames.create({"input":":play welcome"})
+#Commented by Aaron.Z    link: (scope, element, attrs) ->
+#Commented by Aaron.Z      scope.frames.create({"input":":play welcome"})
 ])
