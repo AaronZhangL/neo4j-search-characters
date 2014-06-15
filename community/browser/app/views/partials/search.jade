@@ -1,0 +1,18 @@
+#search
+  .view-search(ng-mousedown="focusEditor($event)", ng-controller = "EditorCtrl")
+    span(ng-class="{'one-line': editorOneLine, 'disable-highlighting': disableHighlighting}")
+      .prompt.code-style $
+      textarea('ui-codemirror'="{theme: 'neo', mode: 'cypher', autofocus: true, lineNumbers: true, lineWrapping: true, onLoad: codemirrorLoaded}",
+        ng-model='editor.content',
+        placeholder='{{motd.tip}}'
+        )
+    ul.controls.inline
+      li(tooltip-placement='bottom', tooltip='Execute')
+        a.balled.success('ng-click' = 'editor.execScript(editor.content)', ng-class="{active: editor.content}")
+          i.icon-play
+
+//-    .message-bar.error.slide-down(ng-if='search.showMessage', ng-class="search.errorCode")
+//-      span(ng-bind-html-unsafe="search.errorMessage")
+//-      |  Type <code click-to-code="':help'">:help</code> for a list of available commands.
+//-      .actions
+//-        a.icon-remove(ng-click='search.showMessage = null')

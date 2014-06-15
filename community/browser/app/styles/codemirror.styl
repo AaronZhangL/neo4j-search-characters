@@ -83,3 +83,54 @@ left-margin = 16px
   .disable-highlighting
     .CodeMirror .CodeMirror-code *
       color: #7B7F89
+ 
+#search
+  .CodeMirror
+    background-color: transparent
+    margin: 25px 180px 25px left-margin
+    transist: all
+    @extend .code-style
+    pre
+      padding: 0
+    .CodeMirror-placeholder
+      color: #E0E2E6
+  .CodeMirror-lines
+    padding: 0
+  .CodeMirror-gutters
+    border: none
+    border-right: 10px solid transparent
+    background-color: transparent
+  .CodeMirror-linenumber
+    padding: 0
+    color: #E0E2E5
+    opacity: 1
+  .CodeMirror
+    height: auto
+  .CodeMirror-scroll
+    overflow: hidden
+    max-height: 140px
+  .CodeMirror div.CodeMirror-cursor
+    border-left: 11px solid rgba(155, 157, 162, 0.37)
+    z-index: 3
+
+  // Smooth transition from multi-line to one-line
+  .CodeMirror-sizer
+    transist min-height
+  .CodeMirror-scroll div:nth-child(2)
+    transist top
+
+  .prompt
+    absolute: top 24px left (left-margin + 9px)
+    color: #93969b
+    opacity: 0
+
+  .one-line
+    .prompt
+      opacity: 1
+    .CodeMirror .CodeMirror-linenumber
+      opacity: 0
+
+  .disable-highlighting
+    .CodeMirror .CodeMirror-code *
+      color: #7B7F89
+ 

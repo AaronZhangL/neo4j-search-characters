@@ -7,13 +7,6 @@
         placeholder='{{motd.tip}}'
         )
     ul.controls.inline
-      li(tooltip-placement='bottom', tooltip='Save')
-        a.balled.golden(ng-class="{active: editor.content, 'enabled': editor.document.id, 'changed': editor.hasChanged()}", ng-click='star()')
-          i.icon-star(ng-class="{'icon-exclamation': editor.hasChanged()}")
-      li(tooltip-placement='bottom', tooltip='New')
-        a.balled.add(ng-click='editor.setContent("")', ng-class="{active: editor.content}")
-          i.icon-plus
-      li.divider &nbsp;
       li(tooltip-placement='bottom', tooltip='Execute')
         a.balled.success('ng-click' = 'editor.execScript(editor.content)', ng-class="{active: editor.content}")
           i.icon-play
@@ -23,3 +16,11 @@
       |  Type <code click-to-code="':help'">:help</code> for a list of available commands.
       .actions
         a.icon-remove(ng-click='editor.showMessage = null')
+//-Modified by Aaron.Z
+//-      li(tooltip-placement='bottom', tooltip='Save')
+//-        a.balled.golden(ng-class="{active: editor.content, 'enabled': editor.document.id, 'changed': editor.hasChanged()}", ng-click='star()')
+//-          i.icon-star(ng-class="{'icon-exclamation': editor.hasChanged()}")
+//-      li(tooltip-placement='bottom', tooltip='New')
+//-        a.balled.add(ng-click='editor.setContent("")', ng-class="{active: editor.content}")
+//-          i.icon-plus
+//-      li.divider &nbsp;
