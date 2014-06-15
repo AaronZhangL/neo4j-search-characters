@@ -359,7 +359,33 @@ a.badge, a.label
     display: none
 
 .maximize-editor
-  #editor
+  #editor #search
+    min-height: 100%
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    overflow-y: scroll
+    .view-editor
+      min-height: 100%
+    .CodeMirror
+      position: absolute
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
+    .CodeMirror-scroll
+      max-height: initial
+    .message-bar
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 0
+      z-index: 10
+
+.maximize-search
+  #search
     min-height: 100%
     position: absolute
     top: 0
