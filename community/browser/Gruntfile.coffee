@@ -88,7 +88,7 @@ module.exports = (grunt) ->
       proxies: [
           {
               context: '/db',
-              host: '107.170.35.162',
+              host: '0.0.0.0',
               port: 7474,
               https: false,
               changeOrigin: false
