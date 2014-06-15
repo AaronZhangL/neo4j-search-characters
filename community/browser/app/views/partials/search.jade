@@ -1,5 +1,5 @@
 #search
-  .view-editor(ng-mousedown="focusEditor($event)", ng-controller = "EditorCtrl")
+  .view-search(ng-mousedown="focusEditor($event)", ng-controller = "EditorCtrl")
     span(ng-class="{'one-line': editorOneLine, 'disable-highlighting': disableHighlighting}")
       .prompt.code-style $
       textarea('ui-codemirror'="{theme: 'neo', mode: 'cypher', autofocus: true, lineNumbers: true, lineWrapping: true, onLoad: codemirrorLoaded}",
