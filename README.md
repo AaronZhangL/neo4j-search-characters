@@ -2,7 +2,7 @@ Chinese characters search site
 ===================
 
 >> Setting file: /Gruntfile.coffee
-#----------------------------------
+
     connect:
       options:
         port: 9000
